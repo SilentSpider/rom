@@ -5,4 +5,4 @@
 
 echo "Building ROM"
 
-jar cvfm update.zip -C src/ .
+jar cvf update.zip -C src/ .
