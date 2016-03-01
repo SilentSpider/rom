@@ -4,6 +4,7 @@
 #
 
 echo "Building ROM"
+rm -f update.zip
 
 7z a -tzip bootanimation.zip -r bootanimation/*
 mv bootanimation.zip src/common
