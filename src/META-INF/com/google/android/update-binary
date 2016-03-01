@@ -59,7 +59,7 @@ rm -f $BOOTANIM
 ls /system/media
 
 cp_perm 0 0 0644 $COM/com.estrongs.android.pop.apk $APKNAME
-# cp_perm 0 0 0644 $COM/bootanimation.zip $BOOTANIM
+cp_perm 0 0 0644 $COM/bootanimation.zip $BOOTANIM
 
 ui_print "- Copyied files"
 
