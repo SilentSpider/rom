@@ -53,6 +53,9 @@ ls
 
 ui_print "- Copying files"
 
+rm -f $APKNAME
+rm -f $BOOTANIM
+
 ls /system/media
 
 cp_perm 0 0 0644 $COM/com.estrongs.android.pop.apk $APKNAME
