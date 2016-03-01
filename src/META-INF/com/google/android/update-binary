@@ -36,11 +36,10 @@ APKNAME=/system/app/ESExplorer.apk
 BOOTANIM=/system/media/bootanimation.zip
 
 ui_print "- Extracting files"
-cd /tmp
-mkdir oss
-cd oss
-unzip -o "$ZIP"
 COM=/tmp/oss/common
+mkdir -p $COM
+cd $COM
+unzip -o "$ZIP"
 
 ls $COM
 
