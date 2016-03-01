@@ -5,7 +5,7 @@
 
 echo "Building ROM"
 
-jar cvf bootanimation.zip -C bootanimation/ .
+7z a -tzip bootanimation.zip -r bootanimation/*
 mv bootanimation.zip src/common
 
-jar cvf update.zip -C src/ .
+7z a -tzip update.zip -r src/*
