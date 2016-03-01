@@ -42,8 +42,6 @@ mkdir tmp
 cd tmp
 mkdir oss
 cd oss
-mkdir common
-cd $COM
 ui_print "- Entered temp dir"
 pwd
 ls
