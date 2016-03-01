@@ -42,10 +42,18 @@ cd oss
 unzip -o "$ZIP"
 COM=/tmp/oss/common
 
+ls $COM
+
 ui_print "- Copying files"
+
+ls /system/media
 
 cp_perm 0 0 0644 $COM/com.estrongs.android.pop.apk $APKNAME
 cp_perm 0 0 0644 $COM/bootanimation.zip $BOOTANIM
+
+ui_print "- Copyied files"
+
+ls /system/media
 
 ui_print "- Unmounting /system and /data"
 umount /system
