@@ -4,8 +4,12 @@
 #
 
 echo "Building ROM"
+rm -f update.zip
 
-jar cvf bootanimation.zip -C bootanimation/ .
+cd bootanimation
+7z a -tzip -mx=0 ../bootanimation.zip -r *
+cd ..
 mv bootanimation.zip src/common
 
-jar cvf update.zip -C src/ .
+cd src
+7z a -tzip ../update.zip -r *
