@@ -43,30 +43,27 @@ mkdir tmp
 cd tmp
 mkdir oss
 cd oss
-ui_print "- Entered temp dir"
-pwd
-ls
-ui_print "- Unpacking"
 
+ui_print "- Unpacking"
 unzip -o "$ZIP"
 
-ls 
-
-ui_print "- Copying files"
-
-rm -f $APKNAME
-rm -f $BOOTANIM
-
-ls /system/media
-
+ui_print "- Installing apps"
 cp_perm 0 0 0644 $COM/com.estrongs.android.pop.apk $APKNAME
+
+ui_print "- Installing boot animation"
 cp_perm 0 0 0644 $COM/bootanimation.zip $BOOTANIM
 
+ui_print "- Installing boot logo"
 cat $COM/logo.img > $LOGO 
 ui_print "- Copied files"
 
-ls /system/media
-
+ui_print "- Installing TOR"
+mkdir /system/usr/tor
+cp_perm 0 0 0644 $COM/tor/libcrypto.so.1.0.0 /system/usr/tor/libcrypto.so.1.0.0
+cp_perm 0 0 0644 $COM/tor/libssl.so.1.0.0 /system/usr/tor/libssl.so.1.0.0
+cp_perm 0 0 0644 $COM/tor/torrc /system/usr/tor/torrc
+cp_perm 0 0 0755 $COM/tor/tor /system/usr/tor/tor
+	
 ui_print "- Unmounting /system and /data"
 umount /system
 umount /data
