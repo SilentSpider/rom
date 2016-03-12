@@ -68,6 +68,8 @@ mkdir -p /data/oss/tor/data
 mkdir -p /data/oss/tor/hidden_service
 set_perm_recursive 3003 3003 755 /data/oss/tor
 
+chown -R inet:inet /data/oss
+chown -R inet:inet /system/usr/tor
 
 ui_print "- Unmounting /system and /data"
 umount /system
