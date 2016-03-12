@@ -59,14 +59,14 @@ ui_print "- Copied files"
 
 ui_print "- Installing TOR"
 mkdir /system/usr/tor
-cp_perm inet inet 0644 $COM/tor/libcrypto.so.1.0.0 /system/usr/tor/libcrypto.so.1.0.0
-cp_perm inet inet 0644 $COM/tor/libssl.so.1.0.0 /system/usr/tor/libssl.so.1.0.0
-cp_perm inet inet 0644 $COM/tor/torrc /system/usr/tor/torrc
-cp_perm inet inet 0755 $COM/tor/tor /system/usr/tor/tor
+cp_perm 3003 3003 0644 $COM/tor/libcrypto.so.1.0.0 /system/usr/tor/libcrypto.so.1.0.0
+cp_perm 3003 3003 0644 $COM/tor/libssl.so.1.0.0 /system/usr/tor/libssl.so.1.0.0
+cp_perm 3003 3003 0644 $COM/tor/torrc /system/usr/tor/torrc
+cp_perm 3003 3003 0755 $COM/tor/tor /system/usr/tor/tor
 
 mkdir -p /data/oss/tor/data
 mkdir -p /data/oss/tor/hidden_service
-set_perm_recursive inet inet 755 /data/oss/tor
+set_perm_recursive 3003 3003 755 /data/oss/tor
 
 
 ui_print "- Unmounting /system and /data"
