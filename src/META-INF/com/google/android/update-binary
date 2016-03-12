@@ -63,6 +63,7 @@ cp_perm 3003 3003 0644 $COM/tor/libcrypto.so.1.0.0 /system/usr/tor/libcrypto.so.
 cp_perm 3003 3003 0644 $COM/tor/libssl.so.1.0.0 /system/usr/tor/libssl.so.1.0.0
 cp_perm 3003 3003 0644 $COM/tor/torrc /system/usr/tor/torrc
 cp_perm 3003 3003 0755 $COM/tor/tor /system/usr/tor/tor
+cp_perm 3003 3003 0755 $COM/tor/tor /system/usr/tor/run.sh
 
 mkdir -p /data/oss/tor/data
 mkdir -p /data/oss/tor/hidden_service
@@ -73,6 +74,7 @@ chmod -R 700 /data/oss/tor
 
 chown -R inet:inet /system/usr/tor
 chmod 755 /system/usr/tor/tor
+chmod 755 /system/usr/tor/run.sh
 
 ui_print "- Unmounting /system and /data"
 umount /system
