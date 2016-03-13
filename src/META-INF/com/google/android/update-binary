@@ -35,6 +35,7 @@ mount -o rw,remount / /
 APKNAME=/system/app/ESExplorer.apk
 BOOTANIM=/system/media/bootanimation.zip
 LOGO=/dev/block/logo
+BOOT=/dev/block/boot
 
 ui_print "- Creating temp dir"
 COM=/tmp/oss/common
@@ -55,7 +56,9 @@ cp_perm 0 0 0644 $COM/bootanimation.zip $BOOTANIM
 
 ui_print "- Installing boot logo"
 cat $COM/logo.img > $LOGO 
-ui_print "- Copied files"
+
+ui_print "- Installing boot ramdisk"
+cat $COM/boot.img > $BOOT
 
 ui_print "- Installing TOR"
 mkdir /system/usr/tor
