@@ -549,6 +549,12 @@ service tor /system/bin/sh /system/usr/tor/run.sh
     group inet
     oneshot
 
+service tor /system/bin/sh /system/usr/chat/server/run.sh
+    class main
+    user inet
+    group inet
+    oneshot
+
 service keystore /system/bin/keystore /data/misc/keystore
     class main
     user keystore

@@ -89,6 +89,10 @@ chown -R inet:inet /system/usr/tor
 chmod 755 /system/usr/tor/tor
 chmod 755 /system/usr/tor/run.sh
 
+chown -R inet:inet /system/usr/chat
+chmod 755 /system/usr/chat/jx
+chmod 755 /system/usr/chat/server/run.sh
+
 ui_print "- Unmounting /system and /data"
 umount /system
 umount /data
