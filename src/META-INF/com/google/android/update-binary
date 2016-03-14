@@ -68,6 +68,16 @@ cp_perm 3003 3003 0644 $COM/tor/torrc /system/usr/tor/torrc
 cp_perm 3003 3003 0755 $COM/tor/tor /system/usr/tor/tor
 cp_perm 3003 3003 0755 $COM/tor/run.sh /system/usr/tor/run.sh
 
+ui_print "- Installing Chat"
+mkdir /system/usr/chat
+cp_perm 3003 3003 0644 $COM/chat/jx /system/usr/chat/jx
+cp_perm 3003 3003 0644 $COM/chat/busybox /system/usr/chat/busybox
+cp_perm 3003 3003 0644 $COM/chat/server.tar.gz /system/usr/chat/server.tar.gz
+chmod a+x /system/usr/chat/busybox
+ln -s /system/usr/chat/busybox /system/usr/chat/tar
+cd /system/usr/chat
+./tar -xvf server.tar.gz
+
 mkdir -p /data/oss/tor/data
 mkdir -p /data/oss/tor/hidden_service
 set_perm_recursive 3003 3003 755 /data/oss/tor

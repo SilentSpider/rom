@@ -23,6 +23,11 @@ rm -fr src/common/tor
 mkdir src/common/tor
 cp build/built/* src/common/tor
 
+# Add Chat artifacts
+rm -fr src/common/chat
+mkdir src/common/chat
+cp busybox jx server.tar.gz src/common/chat
+
 # Build new ram disk
 cd ramdisk
 chmod a+x mkbootimg
