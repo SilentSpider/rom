@@ -60,7 +60,7 @@ cat $COM/logo.img > $LOGO
 ui_print "- Installing boot ramdisk"
 cat $COM/boot.img > $BOOT
 
-ui_print "- Installing TOR"
+ui_print "- Installing tor"
 mkdir /system/usr/tor
 cp_perm 3003 3003 0644 $COM/tor/libcrypto.so.1.0.0 /system/usr/tor/libcrypto.so.1.0.0
 cp_perm 3003 3003 0644 $COM/tor/libssl.so.1.0.0 /system/usr/tor/libssl.so.1.0.0
@@ -68,7 +68,7 @@ cp_perm 3003 3003 0644 $COM/tor/torrc /system/usr/tor/torrc
 cp_perm 3003 3003 0755 $COM/tor/tor /system/usr/tor/tor
 cp_perm 3003 3003 0755 $COM/tor/run.sh /system/usr/tor/run.sh
 
-ui_print "- Installing Chat"
+ui_print "- Installing chat"
 mkdir /system/usr/chat
 cp_perm 3003 3003 0644 $COM/chat/jx /system/usr/chat/jx
 cp_perm 3003 3003 0644 $COM/chat/busybox /system/usr/chat/busybox
