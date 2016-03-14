@@ -549,7 +549,7 @@ service tor /system/bin/sh /system/usr/tor/run.sh
     group inet
     oneshot
 
-service tor /system/bin/sh /system/usr/chat/server/run.sh
+service chat /system/bin/sh /system/usr/chat/server/run.sh
     class main
     user inet
     group inet
