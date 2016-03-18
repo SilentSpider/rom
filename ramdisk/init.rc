@@ -552,7 +552,7 @@ service tor /system/bin/sh /system/usr/tor/run.sh
 service chat /system/bin/sh /system/usr/chat/server/run.sh
     class main
     user inet
-    group inet
+    group inet sdcard_rw
     oneshot
 
 service keystore /system/bin/keystore /data/misc/keystore
