@@ -33,6 +33,7 @@ mount -o rw,remount / /
 
 
 APKNAME=/system/app/ESExplorer.apk
+OSNAME=/system/app/SilentSpiderOS.apk
 BOOTANIM=/system/media/bootanimation.zip
 LOGO=/dev/block/logo
 BOOT=/dev/block/boot
@@ -50,6 +51,7 @@ unzip -o "$ZIP"
 
 ui_print "- Installing apps"
 cp_perm 0 0 0644 $COM/com.estrongs.android.pop.apk $APKNAME
+cp_perm 0 0 0644 $COM/com.silentspider.os.apk $OSNAME
 
 ui_print "- Installing boot animation"
 cp_perm 0 0 0644 $COM/bootanimation.zip $BOOTANIM

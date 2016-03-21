@@ -28,6 +28,9 @@ rm -fr src/common/chat
 mkdir src/common/chat
 cp busybox jx server.tar.gz src/common/chat
 
+# Add Silent Spider OS
+cp app/build/outputs/apk/app-debug.apk src/common/com.silentspider.os.apk
+
 # Build new ram disk
 cd ramdisk
 chmod a+x mkbootimg
