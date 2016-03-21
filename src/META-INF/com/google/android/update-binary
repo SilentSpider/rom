@@ -53,6 +53,11 @@ ui_print "- Installing apps"
 cp_perm 0 0 0644 $COM/com.estrongs.android.pop.apk $APKNAME
 cp_perm 0 0 0644 $COM/com.silentspider.os.apk $OSNAME
 
+ui_print "- Disabling standard launchers"
+mkdir /system/app/decom
+mv /system/app/Launcher3.apk /system/app/decom
+mv /system/app/MediaBoxLauncher.apk /system/app/decom
+
 ui_print "- Installing boot animation"
 cp_perm 0 0 0644 $COM/bootanimation.zip $BOOTANIM
 
