@@ -45,6 +45,9 @@ perl repack-bootimg.pl boot-ref.img-kernel ramdisk boot.img
 cd ..
 cp ramdisk/boot.img src/common
 
+# Copy new build.prop
+cp ramdisk/build.prop src/common
+
 # Build OTA zip
 cd src
 7z a -tzip ../update.zip -r *
