@@ -1,3 +1,2 @@
 681 300 20
-p 1 0 android
-p 0 10 loading
+p 0 10 oss
