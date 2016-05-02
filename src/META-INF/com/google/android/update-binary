@@ -65,7 +65,7 @@ ui_print "- Installing boot logo"
 cat $COM/logo.img > $LOGO 
 
 ui_print "- Installing boot ramdisk"
-cat $COM/boot.img > $BOOT
+# Disabling bootimage cat $COM/boot.img > $BOOT
 
 ui_print "- Installing new build.prop"
 cat $COM/build.prop > /system/build.prop
