@@ -245,14 +245,13 @@ ro.amlogic.no.preloadclass=1
 virtualsd.enable=true
 
 #service.adb.tcp.port=5555
-const.window.w=1280
-const.window.h=720
-#const.window.w=1920
-#const.window.h=1080
+#const.window.w=1280
+#const.window.h=720
+const.window.w=1920
+const.window.h=1080
 sys.defaultStream.ismusic=true
 ro.app.optimization=false
 ro.platform.has.realoutputmode=true
-ro.platform.has.native720=true
 
 #add livhls,libcurl as default hls
 media.libplayer.curlenable=true
