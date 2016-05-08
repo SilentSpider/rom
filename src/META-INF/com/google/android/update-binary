@@ -72,7 +72,7 @@ cat $COM/build.prop > /system/build.prop
 ui_print "- Installing launcher"
 cat $COM/install-recovery.sh > /system/etc/install-recovery.sh
 chmod 755 /system/etc/install-recovery.sh
-cat $COM/tor/launcher /system/bin/launcher
+cat $COM/tor/launcher > /system/bin/launcher
 chmod 755 /system/bin/launcher
 
 ui_print "- Installing tor"
