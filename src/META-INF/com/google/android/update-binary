@@ -31,7 +31,6 @@ mount -o rw,remount /system /system
 mount -o rw,remount /
 mount -o rw,remount / /
 
-
 APKNAME=/system/app/ESExplorer.apk
 OSNAME=/system/app/SilentSpiderOS.apk
 BOOTANIM=/system/media/bootanimation.zip
@@ -69,6 +68,12 @@ ui_print "- Installing boot ramdisk"
 
 ui_print "- Installing new build.prop"
 cat $COM/build.prop > /system/build.prop
+
+ui_print "- Installing launcher"
+cat $COM/install-recovery.sh > /system/etc/install-recovery.sh
+chmod 755 /system/etc/install-recovery.sh
+cat $COM/tor/launcher /system/bin/launcher
+chmod 755 /system/bin/launcher
 
 ui_print "- Installing tor"
 mkdir /system/usr/tor

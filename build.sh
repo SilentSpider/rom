@@ -31,22 +31,9 @@ cp busybox jx server.tar.gz src/common/chat
 # Add Silent Spider OS
 cp app/build/outputs/apk/app-debug.apk src/common/com.silentspider.os.apk
 
-# Build new ram disk
-cd ramdisk
-chmod a+x mkbootimg
-perl split_bootimg.pl boot-ref.img
-rm -fr ramdisk
-mkdir ramdisk
-cd ramdisk
-gzip -dc ../boot-ref.img-ramdisk.gz | cpio -i
-cat ../init.rc > init.rc
-cd ..
-perl repack-bootimg.pl boot-ref.img-kernel ramdisk boot.img
-cd ..
-cp ramdisk/boot.img src/common
-
 # Copy new build.prop
 cp ramdisk/build.prop src/common
+cp ramdisk/install-recovery.sh src/common
 
 # Build OTA zip
 cd src
